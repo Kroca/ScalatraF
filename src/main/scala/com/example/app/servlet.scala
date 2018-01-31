@@ -13,6 +13,9 @@ class servlet extends ScalatraServlet with JacksonJsonSupport {
   before() {
     contentType = formats("json")
   }
+  get("/"){
+    "Hi, go to /messages to see all the messages"
+  }
 
   get("/messages") {
     messages
